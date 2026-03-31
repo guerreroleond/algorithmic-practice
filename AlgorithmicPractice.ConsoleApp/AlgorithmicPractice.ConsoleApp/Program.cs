@@ -6,7 +6,7 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Sliding Window - Longest Substring Without Repeating
 
-var input = "dvdf";
+var input = "VDFVABCDAJKLCB";
 
 var result = LongestSubstringWithoutRepeating.Solve(input);
 
