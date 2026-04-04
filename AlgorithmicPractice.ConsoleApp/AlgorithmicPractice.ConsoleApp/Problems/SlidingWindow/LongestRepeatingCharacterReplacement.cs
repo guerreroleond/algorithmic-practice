@@ -12,16 +12,17 @@ public class LongestRepeatingCharacterReplacement
 
         var dict = new Dictionary<char, int>();
 
-        for (int right = 0; right < s.Length, right++)
+        for (int right = 0; right < s.Length; right++)
         {
             char c = s[right];
             dict[c] = dict.GetValueOrDefault(c) + 1;
-            int maxFreq = dict.GetValueOrDefault(c) + 1;
+            int maxFreq = dict.Values.Max();
 
             while ((right - left + 1) - maxFreq > allowedChanges)
             {
                 dict[s[left]]--;
                 left++;
+                maxFreq = dict.Values.Max();
             }
 
             int windowSize = right - left + 1;

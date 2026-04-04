@@ -24,7 +24,7 @@ Console.WriteLine(
                     $"with input '{input}' and k={k}.");
 
 var result = LongestRepeatingCharacterReplacement
-                .SolveString(input, k);
+                .SolveStringCleanedUp(input, k);
 
 Console.WriteLine($" Longest repeating substring {result}");
 Console.ReadLine();
