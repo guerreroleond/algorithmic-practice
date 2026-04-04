@@ -16,16 +16,15 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Sliding Window - Longest Repeating Character Replacement
 
-var replacementInput = "AABABBA";
-var k = 1;
+var input = "AABBBCACCCD";
+var k = 2;
 
-var longestRepeatingCharacterReplacement = new LongestRepeatingCharacterReplacement();
-
-Console.WriteLine($"Debug placeholder for {nameof(LongestRepeatingCharacterReplacement)}" + 
-                    $"with input '{replacementInput}' and k={k}.");
+Console.WriteLine(
+    $"Debug placeholder for {nameof(LongestRepeatingCharacterReplacement)}" +
+                    $"with input '{input}' and k={k}.");
 
 var result = LongestRepeatingCharacterReplacement
-                .Solve2(replacementInput, k);
+                .SolveString(input, k);
 
 Console.WriteLine($" Longest repeating substring {result}");
 Console.ReadLine();
