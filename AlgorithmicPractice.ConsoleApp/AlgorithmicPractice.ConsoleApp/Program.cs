@@ -34,11 +34,24 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Two Pointers - Two Sum II
 
-var numbers = new int[] { 2, 7, 11, 15 };
+// var numbers = new int[] { 2, 7, 11, 15 };
 
-var result = TwoSumII.Solve(numbers, 26);
+// var result = TwoSumII.Solve(numbers, 26);
 
-Console.WriteLine($"Two Sum II result: [{string.Join(", ", result)}]");
-Console.ReadLine();
+// Console.WriteLine($"Two Sum II result: [{string.Join(", ", result)}]");
+
 
 #endregion Two Pointers - Two Sum II
+
+// #region Two Pointers - Trapping Rain Water
+//
+// var peaks = new int[] { 4,2,0,3,2,5 };
+//
+// var trappedWater = TrappingRainWater.Solve(peaks);
+//
+// Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
+// Console.ReadLine();
+//
+// #endregion Two Pointers - Trapping Rain Water
+
+// Console.ReadLine();
