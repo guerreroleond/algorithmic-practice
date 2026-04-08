@@ -32,7 +32,18 @@ Console.WriteLine("Algorithmic Practice");
 //
 // #endregion Sliding Window - Longest Repeating Character Replacement
 
-#region Two Pointers - Two Sum II
+// #region Two Pointers - Two Sum II
+//
+// var numbers = new int[] { 2, 7, 11, 15 };
+//
+// var result = TwoSumII.Solve(numbers, 26);
+//
+// Console.WriteLine($"Two Sum II result: [{string.Join(", ", result)}]");
+// Console.ReadLine();
+//
+// #endregion Two Pointers - Two Sum II
+
+#region Two Pointers - Valid Palindrome
 
 // var numbers = new int[] { 2, 7, 11, 15 };
 
@@ -55,3 +66,11 @@ Console.WriteLine("Algorithmic Practice");
 // #endregion Two Pointers - Trapping Rain Water
 
 // Console.ReadLine();
+var input = "A man, a plan, a canal: Panama";
+
+var result = ValidPalindrome.Solve(input);
+
+Console.WriteLine($"Valid Palindrome result: {result}");
+Console.ReadLine();
+
+#endregion Two Pointers - Valid Palindrome
