@@ -1,11 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 using AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 
 Console.WriteLine("Algorithmic Practice");
 
-
-// #region Sliding Window - Longest Substring Without Repeating
+#region Sliding Window - Longest Substring Without Repeating
 //
 // var input = "VDFVABCDAJKLCB";
 //
@@ -13,9 +12,9 @@ Console.WriteLine("Algorithmic Practice");
 //
 // Console.WriteLine($" longest substring length {result}");
 //
-// #endregion Sliding Window - Longest Substring Without Repeating
+#endregion Sliding Window - Longest Substring Without Repeating
 
-// #region Sliding Window - Longest Repeating Character Replacement
+#region Sliding Window - Longest Repeating Character Replacement
 //
 // var input = "AABBBCACCCD";
 // var k = 2;
@@ -28,49 +27,36 @@ Console.WriteLine("Algorithmic Practice");
 //                 .SolveStringCleanedUp(input, k);
 //
 // Console.WriteLine($" Longest repeating substring {result}");
-// Console.ReadLine();
 //
-// #endregion Sliding Window - Longest Repeating Character Replacement
+#endregion Sliding Window - Longest Repeating Character Replacement
 
-// #region Two Pointers - Two Sum II
+#region Two Pointers - Two Sum II
 //
 // var numbers = new int[] { 2, 7, 11, 15 };
 //
 // var result = TwoSumII.Solve(numbers, 26);
 //
 // Console.WriteLine($"Two Sum II result: [{string.Join(", ", result)}]");
-// Console.ReadLine();
 //
-// #endregion Two Pointers - Two Sum II
-
-#region Two Pointers - Valid Palindrome
-
-// var numbers = new int[] { 2, 7, 11, 15 };
-
-// var result = TwoSumII.Solve(numbers, 26);
-
-// Console.WriteLine($"Two Sum II result: [{string.Join(", ", result)}]");
-
-
 #endregion Two Pointers - Two Sum II
 
-// #region Two Pointers - Trapping Rain Water
-//
-// var peaks = new int[] { 4,2,0,3,2,5 };
-//
-// var trappedWater = TrappingRainWater.Solve(peaks);
-//
-// Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
-// Console.ReadLine();
-//
-// #endregion Two Pointers - Trapping Rain Water
+#region Two Pointers - Valid Palindrome
+// var input = "A man, a plan, a canal: Panama";
 
-// Console.ReadLine();
-var input = "A man, a plan, a canal: Panama";
+// var result = ValidPalindrome.Solve(input);
 
-var result = ValidPalindrome.Solve(input);
-
-Console.WriteLine($"Valid Palindrome result: {result}");
-Console.ReadLine();
+// Console.WriteLine($"Valid Palindrome result: {result}");
 
 #endregion Two Pointers - Valid Palindrome
+
+#region Two Pointers - Trapping Rain Water
+
+var peaks = new int[] { 4,2,0,3,2,5 };
+
+var trappedWater = TrappingRainWater.Solve(peaks);
+
+Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
+
+#endregion Two Pointers - Trapping Rain Water
+
+Console.ReadLine();
