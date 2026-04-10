@@ -1,4 +1,5 @@
-// See https://aka.ms/new-console-template for more information
+﻿// See https://aka.ms/new-console-template for more information
+using AlgorithmicPractice.ConsoleApp.Problems.Hybrid;
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 using AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 
@@ -50,13 +51,50 @@ Console.WriteLine("Algorithmic Practice");
 #endregion Two Pointers - Valid Palindrome
 
 #region Two Pointers - Trapping Rain Water
-
-var peaks = new int[] { 4,2,0,3,2,5 };
-
-var trappedWater = TrappingRainWater.Solve(peaks);
-
-Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
-
+//
+// var peaks = new int[] { 4,2,0,3,2,5 };
+//
+// var trappedWater = TrappingRainWater.Solve(peaks);
+//
+// Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
+//
 #endregion Two Pointers - Trapping Rain Water
+
+#region Hybrid - Singly Linked List Max Pages
+
+var head = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+{
+    PagesCount = 1,
+    Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+    {
+        PagesCount = 4,
+        Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+        {
+            PagesCount = 3,
+            Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+            {
+                PagesCount = 5,
+                Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+                {
+                    PagesCount = 6,
+                    Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+                    {
+                        PagesCount = 2
+                    }
+                }
+            }
+        }
+    }
+};
+
+//var result = SinglyLinkedListMaxPages.RemoveNthNodeFromEnd(head, 1);
+//var result = SinglyLinkedListMaxPages.Reverse(head);
+
+var result = SinglyLinkedListMaxPages.MaxPages(head);
+
+
+Console.WriteLine($"Singly Linked List Max Pages result: {result}");
+
+#endregion Hybrid - Singly Linked List Max Pages
 
 Console.ReadLine();
