@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AlgorithmicPractice.ConsoleApp.Problems.BinarySearch;
 using AlgorithmicPractice.ConsoleApp.Problems.Sorting;
 using AlgorithmicPractice.ConsoleApp.Problems.DataStructures.LinkedList;
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
@@ -86,14 +87,24 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Sorting - Sort Binary Array And Min Swaps
 
-var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
+//var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
 
 //var nums = new int[] { 0, 1, 0, 1};
 
-var result = SortBinaryArrayAndMinSwaps.SolveAlt(nums);
+//var result = SortBinaryArrayAndMinSwaps.SolveAlt(nums);
 
-Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
+//Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
 
 #endregion Sorting - Sort Binary Array And Min Swaps
+
+#region Binary Search - Basic Binary Search
+
+var nums = new int[] { 2,4,5,6,8,9,10,12 };
+
+var result = BinarySearch.SolveClean(nums, 5);
+
+Console.WriteLine($"Binary Search result: i[{result}] = {nums[result]}");
+
+#endregion Binary Search - Basic Binary Search
 
 Console.ReadLine();
