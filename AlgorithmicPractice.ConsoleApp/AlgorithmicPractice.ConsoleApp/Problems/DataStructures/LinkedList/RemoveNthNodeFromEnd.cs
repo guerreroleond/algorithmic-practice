@@ -1,4 +1,4 @@
-namespace AlgorithmicPractice.ConsoleApp.DataStructures.LinkedList;
+namespace AlgorithmicPractice.ConsoleApp.Problems.DataStructures.LinkedList;
 
 public class RemoveNthNodeFromEnd
 {
