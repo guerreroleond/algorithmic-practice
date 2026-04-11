@@ -60,7 +60,7 @@ Console.WriteLine("Algorithmic Practice");
 //
 #endregion Two Pointers - Trapping Rain Water
 
-// #region Hybrid - Singly Linked List Max Pages
+#region Hybrid - Singly Linked List Max Pages
 //
 // var head = new SinglyLinkedListNode { PagesCount = 1, Next = new SinglyLinkedListNode { PagesCount = 4, Next = new SinglyLinkedListNode { PagesCount = 3, Next = new SinglyLinkedListNode { PagesCount = 5, Next = new SinglyLinkedListNode { PagesCount = 6, Next = new SinglyLinkedListNode { PagesCount = 2 } } } } } };
 //
@@ -71,7 +71,7 @@ Console.WriteLine("Algorithmic Practice");
 //
 // Console.WriteLine($"Singly Linked List Max Pages result: {result}");
 //
-// #endregion Hybrid - Singly Linked List Max Pages
+#endregion Hybrid - Singly Linked List Max Pages
 
 #region LinkedList - Remove Nth Node From End
 
