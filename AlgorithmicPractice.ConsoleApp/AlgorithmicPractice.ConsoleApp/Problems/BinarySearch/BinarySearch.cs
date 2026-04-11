@@ -5,6 +5,7 @@ namespace AlgorithmicPractice.ConsoleApp.Problems.BinarySearch;
 /// **Inputs:**
 /// `nums`: [2,4,6,8,10,12]
 /// `target`: 10
+/// Output = 4
 /// </summary>
 public class BinarySearch
 {
