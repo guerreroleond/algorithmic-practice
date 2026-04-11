@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using AlgorithmicPractice.ConsoleApp.DataStructures.LinkedList;
+using AlgorithmicPractice.ConsoleApp.Problems.Sorting;
+using AlgorithmicPractice.ConsoleApp.Problems.DataStructures.LinkedList;
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 using AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 
@@ -73,33 +74,26 @@ Console.WriteLine("Algorithmic Practice");
 //
 #endregion Hybrid - Singly Linked List Max Pages
 
-#region LinkedList - Remove Nth Node From End
+// #region LinkedList - Remove Nth Node From End
+//
+// var head = new SinglyLinkedListNode { PagesCount = 1, Next = new SinglyLinkedListNode { PagesCount = 2, Next = new SinglyLinkedListNode { PagesCount = 3, Next = new SinglyLinkedListNode { PagesCount = 4, Next = new SinglyLinkedListNode { PagesCount = 5 } } } } };
+//
+// var result = RemoveNthNodeFromEnd.Solve(head, 2);
+//
+// Console.WriteLine($"Remove Nth Node From End result head PagesCount: {result?.PagesCount}");
+//
+// #endregion LinkedList - Remove Nth Node From End
 
-var head = new SinglyLinkedListNode
-{
-    PagesCount = 1,
-    Next = new SinglyLinkedListNode
-    {
-        PagesCount = 2,
-        Next = new SinglyLinkedListNode
-        {
-            PagesCount = 3,
-            Next = new SinglyLinkedListNode
-            {
-                PagesCount = 4,
-                Next = new SinglyLinkedListNode
-                {
-                    PagesCount = 5
-                }
-            }
-        }
-    }
-};
+#region Sorting - Sort Binary Array And Min Swaps
 
-var result = RemoveNthNodeFromEnd.Solve(head, 2);
+var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
 
-Console.WriteLine($"Remove Nth Node From End result head PagesCount: {result?.PagesCount}");
+//var nums = new int[] { 0, 1, 0, 1};
 
-#endregion LinkedList - Remove Nth Node From End
+var result = SortBinaryArrayAndMinSwaps.SolveAlt(nums);
+
+Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
+
+#endregion Sorting - Sort Binary Array And Min Swaps
 
 Console.ReadLine();
