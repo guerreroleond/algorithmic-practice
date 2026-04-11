@@ -1,4 +1,4 @@
-namespace AlgorithmicPractice.ConsoleApp.Problems.Hybrid;
+namespace AlgorithmicPractice.ConsoleApp.DataStructures.LinkedList;
 
 public class SinglyLinkedListMaxPages
 {
@@ -61,19 +61,19 @@ public class SinglyLinkedListMaxPages
         var maxCount = 0;
 
         while(current != null)
-        {            
+        {
             if(current.Next != null)
             {
                 // Save the first node pages.
                 var pagesCount = current.PagesCount;
-                // Remove first. 
+                // Remove first.
                 head = current.Next;
                 pagesCount += GetLastNodePagesAndRemove(head);
                 maxCount = Math.Max(pagesCount, maxCount);
             }
             current = current.Next;
         }
-        
+
         return maxCount;
     }
 
@@ -104,11 +104,5 @@ public class SinglyLinkedListMaxPages
         }
 
         return pagesCount;
-    }
-
-    public class SinglyLinkedListNode
-    {
-        public int PagesCount { get; set; }
-        public SinglyLinkedListNode? Next { get; set; }
     }
 }

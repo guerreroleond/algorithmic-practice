@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using AlgorithmicPractice.ConsoleApp.Problems.Hybrid;
+using AlgorithmicPractice.ConsoleApp.DataStructures.LinkedList;
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 using AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 
@@ -60,41 +60,46 @@ Console.WriteLine("Algorithmic Practice");
 //
 #endregion Two Pointers - Trapping Rain Water
 
-#region Hybrid - Singly Linked List Max Pages
+// #region Hybrid - Singly Linked List Max Pages
+//
+// var head = new SinglyLinkedListNode { PagesCount = 1, Next = new SinglyLinkedListNode { PagesCount = 4, Next = new SinglyLinkedListNode { PagesCount = 3, Next = new SinglyLinkedListNode { PagesCount = 5, Next = new SinglyLinkedListNode { PagesCount = 6, Next = new SinglyLinkedListNode { PagesCount = 2 } } } } } };
+//
+// //var result = SinglyLinkedListMaxPages.RemoveNthNodeFromEnd(head, 1);
+// //var result = SinglyLinkedListMaxPages.Reverse(head);
+//
+// var result = SinglyLinkedListMaxPages.MaxPages(head);
+//
+// Console.WriteLine($"Singly Linked List Max Pages result: {result}");
+//
+// #endregion Hybrid - Singly Linked List Max Pages
 
-var head = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+#region LinkedList - Remove Nth Node From End
+
+var head = new SinglyLinkedListNode
 {
     PagesCount = 1,
-    Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+    Next = new SinglyLinkedListNode
     {
-        PagesCount = 4,
-        Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+        PagesCount = 2,
+        Next = new SinglyLinkedListNode
         {
             PagesCount = 3,
-            Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+            Next = new SinglyLinkedListNode
             {
-                PagesCount = 5,
-                Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
+                PagesCount = 4,
+                Next = new SinglyLinkedListNode
                 {
-                    PagesCount = 6,
-                    Next = new SinglyLinkedListMaxPages.SinglyLinkedListNode
-                    {
-                        PagesCount = 2
-                    }
+                    PagesCount = 5
                 }
             }
         }
     }
 };
 
-//var result = SinglyLinkedListMaxPages.RemoveNthNodeFromEnd(head, 1);
-//var result = SinglyLinkedListMaxPages.Reverse(head);
+var result = RemoveNthNodeFromEnd.Solve(head, 2);
 
-var result = SinglyLinkedListMaxPages.MaxPages(head);
+Console.WriteLine($"Remove Nth Node From End result head PagesCount: {result?.PagesCount}");
 
-
-Console.WriteLine($"Singly Linked List Max Pages result: {result}");
-
-#endregion Hybrid - Singly Linked List Max Pages
+#endregion LinkedList - Remove Nth Node From End
 
 Console.ReadLine();
