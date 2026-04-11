@@ -99,12 +99,23 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Binary Search - Basic Binary Search
 
-var nums = new int[] { 2,4,5,6,8,9,10,12 };
-
-var result = BinarySearch.SolveClean(nums, 5);
-
-Console.WriteLine($"Binary Search result: i[{result}] = {nums[result]}");
+// var nums = new int[] { 2,4,5,6,8,9,10,12 };
+//
+// var result = BinarySearch.SolveClean(nums, 5);
+//
+// Console.WriteLine($"Binary Search result: i[{result}] = {nums[result]}");
 
 #endregion Binary Search - Basic Binary Search
+
+#region Binary Search - Rotated Binary Search
+
+var nums = new int[] { 4,5,6,7,0,1,2 };
+var target = 2;
+
+var result = RotatedBinarySearch.Solve(nums, target);
+
+Console.WriteLine($"Rotated Binary Search result: {result}");
+
+#endregion Binary Search - Rotated Binary Search
 
 Console.ReadLine();
