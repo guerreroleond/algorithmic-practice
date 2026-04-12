@@ -109,13 +109,23 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Binary Search - Rotated Binary Search
 
-var nums = new int[] { 4,5,6,7,0,1,2 };
-var target = 2;
-
-var result = RotatedBinarySearch.Solve(nums, target);
-
-Console.WriteLine($"Rotated Binary Search result: {result}");
+// var nums = new int[] { 4,5,6,7,0,1,2 };
+// var target = 2;
+//
+// var result = RotatedBinarySearch.Solve(nums, target);
+//
+// Console.WriteLine($"Rotated Binary Search result: {result}");
 
 #endregion Binary Search - Rotated Binary Search
+
+#region Sliding Window - Best Time To Buy And Sell
+
+var prices = new int[] { 7, 1, 5, 3, 6, 4 };
+
+var result = BestTimeToBuyAndSell.Solve(prices);
+
+Console.WriteLine($"Best Time To Buy And Sell result: {result}");
+
+#endregion Sliding Window - Best Time To Buy And Sell
 
 Console.ReadLine();
