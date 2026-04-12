@@ -54,11 +54,11 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP006] Two Pointers - Trapping Rain Water
 
-var peaks = new int[] { 4,2,0,3,2,5 };
-
-var trappedWater = TrappingRainWater.SolveCleanedUp(peaks);
-
-Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
+// var peaks = new int[] { 4,2,0,3,2,5 };
+//
+// var trappedWater = TrappingRainWater.SolveCleanedUp(peaks);
+//
+// Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
 
 #endregion [AP006] Two Pointers - Trapping Rain Water
 
@@ -127,5 +127,15 @@ Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
 // Console.WriteLine($"Best Time To Buy And Sell result: {result}");
 
 #endregion Sliding Window - Best Time To Buy And Sell
+
+#region [AP013] Two Pointers - Container With Most Water
+
+var peaks = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+
+var result = ContainerWithMostWater.Solve(peaks);
+
+Console.WriteLine($"Container With Most Water result: {result}");
+
+#endregion [AP013] Two Pointers - Container With Most Water
 
 Console.ReadLine();

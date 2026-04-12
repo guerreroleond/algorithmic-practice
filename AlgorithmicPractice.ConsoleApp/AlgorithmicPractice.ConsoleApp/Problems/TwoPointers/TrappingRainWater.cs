@@ -5,7 +5,7 @@ namespace AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 /// compute how much rain water can be trapped after raining.
 /// Pattern: Two Pointers with State
 /// Input:  [4,2,0,3,2,5]
-//  Output: 9
+///  Output: 9
 /// </summary>
 public class TrappingRainWater
 {
@@ -15,10 +15,10 @@ public class TrappingRainWater
     ///     - If `peakSide` is higher (or equal), update `maxSide`.
     ///     - Else (if `peakSide` is lower), accumulate water.
     /// - Shift current side pointer.
-    /// - Repeat
-    /// </summary>
+    /// - Repeat   
     /// <param name="peaks">Array where each element represents the height of a bar</param>
     /// <returns>How much water is trapped.</returns>
+    /// </summary>
     public static int SolveCleanedUp(int[] peaks)
     {
         int left = 0;
