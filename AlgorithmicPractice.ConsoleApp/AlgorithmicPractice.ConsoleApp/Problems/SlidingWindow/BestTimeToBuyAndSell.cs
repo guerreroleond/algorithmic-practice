@@ -15,9 +15,11 @@ namespace AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 public class BestTimeToBuyAndSell
 {
     /// <summary>
-    /// We need to keep track of minBuy and maxSell and 
-    /// maxProfit(maxSell - minBuy) every iteration 
-    /// within a valid window(buy must be before sell) right = left + 1
+    /// Start with a `valid window`(buy before sell) `left = 0, right = left + 1 = 1`.
+    /// Keep track of `minBuy` and `maxSell` .
+    /// Calculate `profit`and update `maxProfit`.
+    /// Shift pointers to the right.
+    /// Repeat.
     /// </summary>
     /// <param name="prices">An array prices 
     /// where prices[i] represents the stock price on a day i. 
@@ -25,7 +27,8 @@ public class BestTimeToBuyAndSell
     /// <returns>Max profit by choosing a single buy day and a single sell day,</returns>
     public static int Solve(int[] prices)
     {
-        if (prices == null && prices.Length < 2) return 0;
+        if (prices == null 
+        ||  prices.Length < 2) return 0;
 
         var left = 0;
         var right = left + 1;
