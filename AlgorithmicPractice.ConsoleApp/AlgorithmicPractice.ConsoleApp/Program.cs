@@ -52,15 +52,15 @@ Console.WriteLine("Algorithmic Practice");
 
 #endregion Two Pointers - Valid Palindrome
 
-#region Two Pointers - Trapping Rain Water
-//
-// var peaks = new int[] { 4,2,0,3,2,5 };
-//
-// var trappedWater = TrappingRainWater.Solve(peaks);
-//
-// Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
-//
-#endregion Two Pointers - Trapping Rain Water
+#region [AP006] Two Pointers - Trapping Rain Water
+
+var peaks = new int[] { 4,2,0,3,2,5 };
+
+var trappedWater = TrappingRainWater.SolveCleanedUp(peaks);
+
+Console.WriteLine($"Trapping Rain Water result: {trappedWater}");
+
+#endregion [AP006] Two Pointers - Trapping Rain Water
 
 #region Linked List - (Singly) Max Pages
 //
@@ -120,11 +120,11 @@ Console.WriteLine("Algorithmic Practice");
 
 #region Sliding Window - Best Time To Buy And Sell
 
-var prices = new int[] { 7, 1, 5, 3, 6, 4 };
+// var prices = new int[] { 7, 1, 5, 3, 6, 4 };
 
-var result = BestTimeToBuyAndSell.Solve(prices);
+// var result = BestTimeToBuyAndSell.Solve(prices);
 
-Console.WriteLine($"Best Time To Buy And Sell result: {result}");
+// Console.WriteLine($"Best Time To Buy And Sell result: {result}");
 
 #endregion Sliding Window - Best Time To Buy And Sell
 

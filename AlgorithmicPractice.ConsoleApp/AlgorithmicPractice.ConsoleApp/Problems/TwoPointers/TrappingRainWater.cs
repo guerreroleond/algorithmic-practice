@@ -1,8 +1,24 @@
 namespace AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 
+/// <summary>
+/// Given an array peaks where each element represents the height of a bar, 
+/// compute how much rain water can be trapped after raining.
+/// Pattern: Two Pointers with State
+/// Input:  [4,2,0,3,2,5]
+//  Output: 9
+/// </summary>
 public class TrappingRainWater
 {
-
+    /// <summary>
+    /// - We need to keep track of the heights formed by the peaks
+    /// - Process the smaller side.
+    ///     - If `peakSide` is higher (or equal), update `maxSide`.
+    ///     - Else (if `peakSide` is lower), accumulate water.
+    /// - Shift current side pointer.
+    /// - Repeat
+    /// </summary>
+    /// <param name="peaks">Array where each element represents the height of a bar</param>
+    /// <returns>How much water is trapped.</returns>
     public static int SolveCleanedUp(int[] peaks)
     {
         int left = 0;
@@ -11,22 +27,27 @@ public class TrappingRainWater
         int maxRight = 0;
         int water = 0;
 
-        while(left < right)
+        while (left < right)
         {
-            if(peaks[left] < peaks[right])
+            // Process smaller side.
+            if (peaks[left] < peaks[right])
             {
-                if(peaks[left] >= maxLeft)
+                if (peaks[left] >= maxLeft)
+                    // Update max if peak higher (or equal).
                     maxLeft = peaks[left];
                 else
+                    // Accumulate water if peak is lower.
                     water += maxLeft - peaks[left];
 
                 left++;
             }
             else
             {
-                if(peaks[right] >= maxRight)
+                if (peaks[right] >= maxRight)
+                    // Update max if peak higher (or equal).
                     maxRight = peaks[right];
                 else
+                    // Accumulate water if peak is lower.
                     water += maxRight - peaks[right];
 
                 right--;
@@ -44,25 +65,25 @@ public class TrappingRainWater
         var maxRight = peaks[right];
         int current = (maxLeft < maxRight) ? left : right;
         int water = 0;
-        
-        while(left < right)
+
+        while (left < right)
         {
             var lowMax = Math.Min(maxLeft, maxRight);
             var currWater = lowMax - peaks[current];
             water += (currWater > 0) ? currWater : 0;
 
-            if(maxLeft < maxRight)
+            if (maxLeft < maxRight)
             {
                 left++;
                 maxLeft = Math.Max(maxLeft, peaks[left]);
                 current = left;
-            } 
+            }
             else
             {
                 right--;
                 maxRight = Math.Max(maxRight, peaks[right]);
-                current = right;                 
-            } 
+                current = right;
+            }
         }
 
         return water;
