@@ -2,6 +2,15 @@ using System.Text;
 
 namespace AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 
+/// <summary>
+/// [AP003] ** Sliding Window **
+/// You are given a string `s` and an integer `k`. 
+/// You can choose any character of the string 
+/// and change it to any other uppercase English character. 
+/// You can perform this operation at most `k` times.
+/// Return *the length of the longest substring containing the same letter 
+/// you can get after performing the above operations*.
+/// </summary>
 public class LongestRepeatingCharacterReplacement
 {
     public static string SolveStringCleanedUp(string s, int allowedChanges)
@@ -75,6 +84,18 @@ public class LongestRepeatingCharacterReplacement
         return longestS.ToString();
     }
 
+    /// <summary>
+    /// Slide the window to the right, increment current char count,
+    /// keep track of max frequency of chars inside current valid window,
+    /// valid window is when bad chars (window size - max freq) <= allowed changes.
+    /// If invalid window, shrink left until valid again.
+    /// calculate current window size, update max lenght.
+    /// </summary>
+    /// <param name="inputString">Input string to evaluate.</param>
+    /// <param name="allowedChanges">Allowed quantity of chars to replace.</param>
+    /// <returns>
+    /// The length of the longest substring containing the same letter + allowed changes. 
+    /// </returns>
     public static int Solve(string inputString, int allowedChanges)
     {
         var left = 0;
@@ -82,9 +103,9 @@ public class LongestRepeatingCharacterReplacement
         var maxFreq = 0;
         var charDict = new Dictionary<char, int>();
 
-        for(var right = 0; right < inputString.Length; right++)
+        for (var right = 0; right < inputString.Length; right++)
         {
-            // Expand.
+            // Expand window to the right.
             var current = inputString[right];
             charDict[current] = charDict.GetValueOrDefault(current) + 1;
 
@@ -92,8 +113,8 @@ public class LongestRepeatingCharacterReplacement
 
             var windowSize = right - left + 1;
             var badChars = windowSize - maxFreq;
-            // Shrink if invalid.
-            while(badChars > allowedChanges)
+            // Shrink left when Repeated until valid again. 
+            while (badChars > allowedChanges)
             {
                 charDict[inputString[left]]--;
                 left++;
@@ -115,7 +136,7 @@ public class LongestRepeatingCharacterReplacement
         var maxFreq = 0;
         var charDict = new Dictionary<char, int>();
 
-        for(var right = 0; right < inputString.Length; right++)
+        for (var right = 0; right < inputString.Length; right++)
         {
             // Expand.
             var current = inputString[right];
@@ -123,14 +144,14 @@ public class LongestRepeatingCharacterReplacement
 
             maxFreq = Math.Max(maxFreq, charDict[current]);
 
-            while((right - left + 1) - maxFreq > allowedChanges)
+            while ((right - left + 1) - maxFreq > allowedChanges)
             {
                 charDict[inputString[left]]--;
                 left++;
             }
 
             // Update result;
-            maxLength = Math.Max(maxLength, right - left + 1);   
+            maxLength = Math.Max(maxLength, right - left + 1);
         }
 
         return maxLength;
@@ -143,29 +164,29 @@ public class LongestRepeatingCharacterReplacement
         var badChars = 0;
         var charDict = new Dictionary<char, int>();
 
-        for(var i = 0;i < input.Length; i++)
+        for (var i = 0; i < input.Length; i++)
         {
             var current = input[i];
-            charDict.TryGetValue(current, out int charCount); 
+            charDict.TryGetValue(current, out int charCount);
             charDict[current] = charCount + 1;
-        } 
+        }
 
         var charIndex = 0;
-        while(windowSize > k)
+        while (windowSize > k)
         {
             maxFrec = charDict.Values.Max();
             badChars = windowSize - maxFrec;
             var current = input[charIndex];
 
             var isWindowValid = badChars <= k;
-            if(isWindowValid)
+            if (isWindowValid)
             {
                 return windowSize;
             }
             else
             {
                 charDict.TryGetValue(current, out int charCount);
-                if(charCount > 0)
+                if (charCount > 0)
                     charDict[current]--;
                 windowSize--;
             }
