@@ -10,29 +10,25 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP001] Sliding Window - Longest Substring Without Repeating
 
-var input = "VDFVABCDAJKLCB";
-
-var result = LongestSubstringWithoutRepeating.Solve(input);
-
-Console.WriteLine($" longest substring length {result}");
+// var input = "VDFVABCDAJKLCB";
+//
+// var result = LongestSubstringWithoutRepeating.Solve(input);
+//
+// Console.WriteLine($" longest substring length {result}");
 
 #endregion [AP001] Sliding Window - Longest Substring Without Repeating
 
-#region Sliding Window - Longest Repeating Character Replacement
-//
-// var input = "AABBBCACCCD";
-// var k = 2;
-//
-// Console.WriteLine(
-//     $"Debug placeholder for {nameof(LongestRepeatingCharacterReplacement)}" +
-//                     $"with input '{input}' and k={k}.");
-//
-// var result = LongestRepeatingCharacterReplacement
-//                 .SolveStringCleanedUp(input, k);
-//
-// Console.WriteLine($" Longest repeating substring {result}");
-//
-#endregion Sliding Window - Longest Repeating Character Replacement
+#region [AP003] Sliding Window - Longest Repeating Character Replacement
+
+var input = "AABBBCACCCCD";
+var k = 2;
+
+var result = LongestRepeatingCharacterReplacement
+                .Solve(input, k);
+
+Console.WriteLine($" Longest repeating substring {result}");
+
+#endregion [AP003] Sliding Window - Longest Repeating Character Replacement
 
 #region Two Pointers - Two Sum II
 //
