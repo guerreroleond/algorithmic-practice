@@ -141,12 +141,26 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP014] Dynamic Programming - Climbing Stairs
 
-var steps = 5;
-
-var result = ClimbingStairs.SolveIterative(steps);
-
-Console.WriteLine($"Climbing Stairs result: {result}");
+// var steps = 5;
+//
+// var result = ClimbingStairs.SolveIterative(steps);
+//
+// Console.WriteLine($"Climbing Stairs result: {result}");
 
 #endregion [AP014] Dynamic Programming - Climbing Stairs
+
+#region [AP015] Dynamic Programming - Coin Change
+
+// var coins = new int[] { 1, 5, 10, 25 };
+// var amount = 41;
+
+var coins = new int[] { 1, 3, 4, 5 };
+var amount = 7;
+
+var result = CoinChange.Solve(coins, amount);
+
+Console.WriteLine($"Coin Change result: {result}");
+
+#endregion [AP015] Dynamic Programming - Coin Change
 
 Console.ReadLine();
