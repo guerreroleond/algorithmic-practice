@@ -2,6 +2,7 @@ namespace AlgorithmicPractice.ConsoleApp.Problems.Sorting;
 
 
 /// <summary>
+/// [AP009] ** Sorting **
 /// Given an array of binary digits, 0 and 1, 
 /// sort the array so that all zeros are at one end and all ones are at the other. 
 /// Which end doesn’t matter. To sort the array, swap any two adjacent elements. 
@@ -9,7 +10,6 @@ namespace AlgorithmicPractice.ConsoleApp.Problems.Sorting;
 /// </summary>
 public class SortBinaryArrayAndMinSwaps
 {
-
     /// <summary>
     /// Counts the cost of moving each 0 (or 1) to its sorted position, 
     /// by calculating and accumulating
