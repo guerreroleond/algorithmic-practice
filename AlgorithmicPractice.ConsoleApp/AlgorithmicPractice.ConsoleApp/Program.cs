@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AlgorithmicPractice.ConsoleApp.Problems.BinarySearch;
+using AlgorithmicPractice.ConsoleApp.Problems.DynamicProgramming;
 using AlgorithmicPractice.ConsoleApp.Problems.Sorting;
 using AlgorithmicPractice.ConsoleApp.Problems.DataStructures.LinkedList;
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
@@ -130,12 +131,22 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP013] Two Pointers - Container With Most Water
 
-var peaks = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-
-var result = ContainerWithMostWater.Solve(peaks);
-
-Console.WriteLine($"Container With Most Water result: {result}");
+// var peaks = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+//
+// var result = ContainerWithMostWater.Solve(peaks);
+//
+// Console.WriteLine($"Container With Most Water result: {result}");
 
 #endregion [AP013] Two Pointers - Container With Most Water
+
+#region [AP014] Dynamic Programming - Climbing Stairs
+
+var steps = 5;
+
+var result = ClimbingStairs.SolveIterative(steps);
+
+Console.WriteLine($"Climbing Stairs result: {result}");
+
+#endregion [AP014] Dynamic Programming - Climbing Stairs
 
 Console.ReadLine();
