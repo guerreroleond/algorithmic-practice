@@ -8,15 +8,15 @@ using AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
 
 Console.WriteLine("Algorithmic Practice");
 
-#region Sliding Window - Longest Substring Without Repeating
-//
-// var input = "VDFVABCDAJKLCB";
-//
-// var result = LongestSubstringWithoutRepeating.Solve(input);
-//
-// Console.WriteLine($" longest substring length {result}");
-//
-#endregion Sliding Window - Longest Substring Without Repeating
+#region [AP001] Sliding Window - Longest Substring Without Repeating
+
+var input = "VDFVABCDAJKLCB";
+
+var result = LongestSubstringWithoutRepeating.Solve(input);
+
+Console.WriteLine($" longest substring length {result}");
+
+#endregion [AP001] Sliding Window - Longest Substring Without Repeating
 
 #region Sliding Window - Longest Repeating Character Replacement
 //
@@ -153,13 +153,13 @@ Console.WriteLine("Algorithmic Practice");
 
 // var coins = new int[] { 1, 5, 10, 25 };
 // var amount = 41;
-
-var coins = new int[] { 1, 3, 4, 5 };
-var amount = 7;
-
-var result = CoinChange.Solve(coins, amount);
-
-Console.WriteLine($"Coin Change result: {result}");
+//
+// var coins = new int[] { 1, 3, 4, 5 };
+// var amount = 7;
+//
+// var result = CoinChange.Solve(coins, amount);
+//
+// Console.WriteLine($"Coin Change result: {result}");
 
 #endregion [AP015] Dynamic Programming - Coin Change
 
