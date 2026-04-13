@@ -1,6 +1,7 @@
 namespace AlgorithmicPractice.ConsoleApp.Problems.BinarySearch;
 
 /// <summary>
+/// [AP011] ** Binary Search **
 /// Given a sorted rotated array of numbers 'nums',
 /// Find the 'target'.
 /// Input:
@@ -13,13 +14,13 @@ public class RotatedBinarySearch
     /// <summary>
     /// Searches for <paramref name="target"/>
     /// in the sorted array <paramref name="nums"/>
-    ///   /// using binary search and returns its index, or -1 if not found.
-    /// </summary>
+    /// using binary search and returns its index, or -1 if not found.
     /// <param name="nums">A sorted *rotated* array of integers.</param>
     /// <param name="target">The value to search for.</param>
     /// <returns>The zero-based index of <paramref name="target"/>, 
     /// or -1 if not found.
     /// </returns>
+    /// </summary>
     public static int Solve(int[] nums, int target)
     {
         var left = 0;
