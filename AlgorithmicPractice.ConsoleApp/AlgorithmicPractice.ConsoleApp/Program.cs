@@ -84,11 +84,11 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP009] Sorting - Sort Binary Array And Min Swaps
 
-var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
-
-var result = SortBinaryArrayAndMinSwaps.Solve(nums);
-
-Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
+// var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
+//
+// var result = SortBinaryArrayAndMinSwaps.Solve(nums);
+//
+// Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
 
 #endregion [AP009] Sorting - Sort Binary Array And Min Swaps
 
@@ -102,16 +102,16 @@ Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
 
 #endregion Binary Search - Basic Binary Search
 
-#region Binary Search - Rotated Binary Search
+#region [AP011] Binary Search - Rotated Binary Search
 
-// var nums = new int[] { 4,5,6,7,0,1,2 };
-// var target = 2;
-//
-// var result = RotatedBinarySearch.Solve(nums, target);
-//
-// Console.WriteLine($"Rotated Binary Search result: {result}");
+var nums = new int[] { 4,5,6,7,0,1,2 };
+var target = 5;
 
-#endregion Binary Search - Rotated Binary Search
+var result = RotatedBinarySearch.Solve(nums, target);
+
+Console.WriteLine($"Rotated Binary Search result: {result}");
+
+#endregion [AP011] Binary Search - Rotated Binary Search
 
 #region Sliding Window - Best Time To Buy And Sell
 
