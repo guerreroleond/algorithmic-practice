@@ -20,13 +20,13 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP003] Sliding Window - Longest Repeating Character Replacement
 
-var input = "AABBBCACCCCD";
-var k = 2;
-
-var result = LongestRepeatingCharacterReplacement
-                .Solve(input, k);
-
-Console.WriteLine($" Longest repeating substring {result}");
+// var input = "AABBBCACCCCD";
+// var k = 2;
+//
+// var result = LongestRepeatingCharacterReplacement
+//                 .Solve(input, k);
+//
+// Console.WriteLine($" Longest repeating substring {result}");
 
 #endregion [AP003] Sliding Window - Longest Repeating Character Replacement
 
@@ -82,17 +82,15 @@ Console.WriteLine($" Longest repeating substring {result}");
 //
 #endregion Linked List - Remove Nth Node From End
 
-#region Sorting - Sort Binary Array And Min Swaps
+#region [AP009] Sorting - Sort Binary Array And Min Swaps
 
-//var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
+var nums = new int[] { 1, 0, 0, 0, 1, 0, 0, 1 };
 
-//var nums = new int[] { 0, 1, 0, 1};
+var result = SortBinaryArrayAndMinSwaps.Solve(nums);
 
-//var result = SortBinaryArrayAndMinSwaps.SolveAlt(nums);
+Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
 
-//Console.WriteLine($"Sort Binary Array Min Swaps result: {result}");
-
-#endregion Sorting - Sort Binary Array And Min Swaps
+#endregion [AP009] Sorting - Sort Binary Array And Min Swaps
 
 #region Binary Search - Basic Binary Search
 
