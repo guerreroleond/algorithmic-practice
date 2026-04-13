@@ -19,12 +19,12 @@ public class BestTimeToBuyAndSell
     /// Keep track of `minBuy` and `maxSell` .
     /// Calculate `profit`and update `maxProfit`.
     /// Shift pointers to the right.
-    /// Repeat.
-    /// </summary>
+    /// Repeat.    
     /// <param name="prices">An array prices 
     /// where prices[i] represents the stock price on a day i. 
     /// </param>
     /// <returns>Max profit by choosing a single buy day and a single sell day,</returns>
+    /// </summary>
     public static int Solve(int[] prices)
     {
         if (prices == null 
