@@ -104,12 +104,12 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP011] Binary Search - Rotated Binary Search
 
-var nums = new int[] { 4,5,6,7,0,1,2 };
-var target = 5;
-
-var result = RotatedBinarySearch.Solve(nums, target);
-
-Console.WriteLine($"Rotated Binary Search result: {result}");
+// var nums = new int[] { 4,5,6,7,0,1,2 };
+// var target = 5;
+//
+// var result = RotatedBinarySearch.Solve(nums, target);
+//
+// Console.WriteLine($"Rotated Binary Search result: {result}");
 
 #endregion [AP011] Binary Search - Rotated Binary Search
 
@@ -156,5 +156,34 @@ Console.WriteLine($"Rotated Binary Search result: {result}");
 // Console.WriteLine($"Coin Change result: {result}");
 
 #endregion [AP015] Dynamic Programming - Coin Change
+
+#region [AP016] Linked List - Reverse Linked List
+
+var head = new SinglyLinkedListNode 
+{
+    PagesCount = 1,
+    Next = new SinglyLinkedListNode 
+    {
+        PagesCount = 2,
+        Next = new SinglyLinkedListNode 
+        {
+            PagesCount = 3,
+            Next = new SinglyLinkedListNode 
+            {
+                PagesCount = 4,
+                Next = new SinglyLinkedListNode 
+                { 
+                    PagesCount = 5 
+                }
+            }
+        }
+    }
+};
+
+var result = SinglyLinkedListNode.Reverse(head);
+
+Console.WriteLine($"Reverse Linked List result head PagesCount: {result?.PagesCount}");
+
+#endregion [AP016] Linked List - Reverse Linked List
 
 Console.ReadLine();
