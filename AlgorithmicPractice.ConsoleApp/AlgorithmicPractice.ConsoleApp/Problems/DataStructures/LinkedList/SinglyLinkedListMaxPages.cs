@@ -18,7 +18,7 @@ public class SinglyLinkedListMaxPages
         }
 
         // 2. Reverse second half starting at slow.
-        var secondHalf = Reverse(slow);
+        var secondHalf = SinglyLinkedListNode.Reverse(slow);
 
         // 3. Traverse both halves.
         var firstHalf = head;
@@ -36,24 +36,24 @@ public class SinglyLinkedListMaxPages
         return maxPages;
     }
 
-    public static SinglyLinkedListNode? Reverse(SinglyLinkedListNode linkedList)
-    {
-        SinglyLinkedListNode? prev = null;
-        var current = linkedList;
+    // public static SinglyLinkedListNode? Reverse(SinglyLinkedListNode linkedList)
+    // {
+    //     SinglyLinkedListNode? prev = null;
+    //     var current = linkedList;
 
-        while(current != null)
-        {
-            // Move and Save next before breaking the links.
-            var next = current.Next;
-            // For current, take its next and reverse it.
-            current.Next = prev;
-            // Shift pointers.
-            prev = current;
-            current = next;
-        }
+    //     while(current != null)
+    //     {
+    //         // Move and Save next before breaking the links.
+    //         var next = current.Next;
+    //         // For current, take its next and reverse it.
+    //         current.Next = prev;
+    //         // Shift pointers.
+    //         prev = current;
+    //         current = next;
+    //     }
 
-        return prev;
-    }
+    //     return prev;
+    // }
 
     public static int MaximumPages(SinglyLinkedListNode head)
     {
