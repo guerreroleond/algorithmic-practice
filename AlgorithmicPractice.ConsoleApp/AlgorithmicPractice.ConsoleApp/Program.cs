@@ -197,5 +197,4 @@ var result = TwoSum.Solve(nums, target);
 Console.WriteLine($"TwoSum result: [{string.Join(", ", result)}]");
 
 #endregion [AP017] - Stack - TwoSum
-
 Console.ReadLine();
