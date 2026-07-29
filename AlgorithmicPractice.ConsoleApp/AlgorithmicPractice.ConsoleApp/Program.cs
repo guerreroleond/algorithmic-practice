@@ -5,6 +5,7 @@ using AlgorithmicPractice.ConsoleApp.Problems.Sorting;
 using AlgorithmicPractice.ConsoleApp.Problems.DataStructures.LinkedList;
 using AlgorithmicPractice.ConsoleApp.Problems.SlidingWindow;
 using AlgorithmicPractice.ConsoleApp.Problems.TwoPointers;
+using AlgorithmicPractice.ConsoleApp.Problems.DataStructures.Lookups;
 
 Console.WriteLine("Algorithmic Practice");
 
@@ -159,31 +160,41 @@ Console.WriteLine("Algorithmic Practice");
 
 #region [AP016] Linked List - Reverse Linked List
 
-var head = new SinglyLinkedListNode 
-{
-    PagesCount = 1,
-    Next = new SinglyLinkedListNode 
-    {
-        PagesCount = 2,
-        Next = new SinglyLinkedListNode 
-        {
-            PagesCount = 3,
-            Next = new SinglyLinkedListNode 
-            {
-                PagesCount = 4,
-                Next = new SinglyLinkedListNode 
-                { 
-                    PagesCount = 5 
-                }
-            }
-        }
-    }
-};
+// var head = new SinglyLinkedListNode 
+// {
+//     PagesCount = 1,
+//     Next = new SinglyLinkedListNode 
+//     {
+//         PagesCount = 2,
+//         Next = new SinglyLinkedListNode 
+//         {
+//             PagesCount = 3,
+//             Next = new SinglyLinkedListNode 
+//             {
+//                 PagesCount = 4,
+//                 Next = new SinglyLinkedListNode 
+//                 { 
+//                     PagesCount = 5 
+//                 }
+//             }
+//         }
+//     }
+// };
 
-var result = SinglyLinkedListNode.Reverse(head);
+// var result = SinglyLinkedListNode.Reverse(head);
 
-Console.WriteLine($"Reverse Linked List result head PagesCount: {result?.PagesCount}");
+// Console.WriteLine($"Reverse Linked List result head PagesCount: {result?.PagesCount}");
 
 #endregion [AP016] Linked List - Reverse Linked List
 
+#region [AP017] - Stack - TwoSum
+
+var nums = new int[] { 11, 15, 7, 2 };
+var target = 9;
+
+var result = TwoSum.Solve(nums, target);
+
+Console.WriteLine($"TwoSum result: [{string.Join(", ", result)}]");
+
+#endregion [AP017] - Stack - TwoSum
 Console.ReadLine();
